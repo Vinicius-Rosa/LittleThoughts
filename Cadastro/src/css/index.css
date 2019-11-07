@@ -1,0 +1,147 @@
+*, body{
+    font-family: 'Roboto', sans-serif;    
+    box-sizing: border-box;
+    background: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Sue Ellen Francisco', cursive;
+    color: #087E8B;
+}
+
+a{
+    text-decoration: none;
+    color: #242424;
+}
+
+h2 > a{
+    font-family: 'Roboto', sans-serif; 
+    color: #087E8B;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+    width: 360px;
+    padding: 20px;
+    align-self: center;
+    flex-direction: column-reverse;
+}
+.img{
+    float: right;
+    align-self: flex-end;
+}
+
+.header > h1{
+    font-size: 3em;
+    padding-bottom: 4vh;
+}
+
+.header > p {
+    font-size: 1.2em;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 30px;
+    padding-bottom: 2vh;
+    color: #242424;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    max-width: 600px;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 50px 50px 20px 50px;
+}
+
+form{
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+}
+
+form > input{
+    width: 70vw;
+    max-width: 400px;
+    height: 5vh;
+    margin: 10px;
+    border: none;
+    outline: 0;
+    /* border-bottom: 2.5px solid #ccc; */
+    border-bottom: 2.5px solid #087E8B;
+    transform: scaleX(0);
+    transition: .4s;
+    text-align: center;
+}
+/* 
+.form-active{
+    border-bottom: 2.5px solid #087E8B;
+    transform: scaleX(1);
+} */
+
+input::placeholder{
+    text-align: center;
+    color: #000;
+}
+
+h2 > a{
+    display: block;
+    font-size: 1em;
+    margin: 30px;
+}
+
+form > a{
+    /* float: left; */
+    font-size: 1.2em;
+    margin-top: 30px;
+    padding: 8px;
+    transition: .3s;
+}
+
+form > a:hover{
+    color: teal;
+}
+
+.form > form > button{
+    /* float: right; */
+    width: 180px;
+    font-size: 1.8em;
+    margin-top: 20px;
+    padding: 8px;
+    border:0 none;
+    cursor:pointer;
+    outline:none;
+    color: teal;
+    /* transition: .3s; */
+    background: transparent;
+}
+
+.form > form > button:hover{
+    color: #f5f5f5;
+    width: 180px;
+    background: teal;
+    /* padding: 8px; */
+    border-radius: 30px;
+}
+
+.anime{
+    opacity: 0;
+    transform: scale3d(0, 0, 0);
+	/* transform: translate3d(-100px, 0, 0); */
+	transition: .8s;
+}
+
+.anime-start{
+	opacity: 1;
+	transform: scale3d(1, 1, 1);
+}
