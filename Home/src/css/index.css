@@ -6,6 +6,7 @@
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Sue Ellen Francisco', cursive;
+    font-weight: 400;
     color: #087E8B;
 }
 
@@ -29,28 +30,49 @@ h2 > a{
                         "aside-menu content content content";
 }
 
-.aside-menu { grid-area: aside-menu; }
+.aside-menu{
+    display: flex;
+    align-items: center;
+}
+
+.aside-menu { 
+    grid-area: aside-menu; 
+    background: #f5f5f5; 
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;    
+}
 
 .content { grid-area: content; }
 
 .text-area { grid-area: text-area; }
 
-.header{
+.aside-header{
     display: flex;
     width: 360px;
     padding: 20px;
+    margin-top: 2vh;
     align-self: center;
+    align-items: center;
     flex-direction: column-reverse;
 }
 
+.aside-header::before{
+    display: inline-block;
+    text-align: center;
+    content: '';
+    height: 2px;
+    width: 120px;
+    background: #087E8B;
+}
+
 .img{
-    /* max-width:80px;
-    max-height:30px; */
-    float: right;
+    /* float: right; */
     align-self: flex-end;
 }
 
 .aside-header > h1{
-    font-size: 2em;
-    padding: 4vh;
+    font-size: 3em;
+    /* padding-left: 4.5vw; */
+    padding-bottom: 4vh;
 }
