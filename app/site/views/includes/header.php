@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco&display=swap" rel="stylesheet"> 
 
     <?php 
-        if(isset($this->dados["includes"])){
+        if(isset($this->dados["includes"]["styles"])){
             foreach ($this->dados["includes"]["styles"] as $styles){
     ?>
                 <link rel="stylesheet" href="<?= $styles ?>">
