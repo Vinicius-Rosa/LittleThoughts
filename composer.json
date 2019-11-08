@@ -1,0 +1,18 @@
+{
+  "description": "Vinicius-Rosa/LittleThoughts",
+  "authors": [
+    {
+      "name": "Maxwell Ferreira",
+      "email": "max@maxwell.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Site\\": "app/site",
+      "Config\\": "config",
+      "App\\": "app"
+    }
+  }
+}
