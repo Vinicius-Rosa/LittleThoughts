@@ -1,0 +1,254 @@
+*, body{
+    font-family: 'Roboto', sans-serif;    
+    box-sizing: border-box;
+    background: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Sue Ellen Francisco', cursive;
+    font-weight: 400;
+    color: #087E8B;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #242424;
+}
+
+h2 > a{
+    font-family: 'Roboto', sans-serif; 
+    color: #087E8B;
+}
+
+.aside-mobile{
+    display: none;
+}
+
+.ul-mobile{
+    display: none;
+}
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "aside-menu text-area text-area text-area" 
+                        "aside-menu content content content" 
+                        "aside-menu content content content";
+}
+
+.aside-menu{
+    position: fixed;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    border-right: 2px solid #087E8B; 
+    width: 20vw;
+    grid-area: aside-menu; 
+    background: #f5f5f5; 
+    padding: 10px;
+    z-index: 1;
+}
+
+.content { 
+    grid-area: content; 
+    margin-left: -4vw;
+    /* width: 100vw; */
+}
+
+.text-area { 
+    grid-area: text-area; 
+    margin-left: -4vw;
+    /* margin-right: 2vw; */
+    margin-right: 10px;
+    margin-bottom: 2vh;
+    /* width: 100vw; */
+}
+
+.content{
+    border-top: 2px solid #ccc;
+}
+
+.aside-header{
+    display: flex;
+    max-width: 500px;
+    padding: 20px;
+    margin-top: 2vh;
+    align-self: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.aside-header > h1{
+    margin-bottom: 20px;
+}
+
+.aside-header::before{
+    display: inline-block;
+    text-align: center;
+    content: '';
+    height: 2px;
+    width: 80px;
+    background: #087E8B;
+}
+
+.img{
+    /* float: right; */
+    align-self: flex-end;
+}
+
+.aside-header > h1{
+    font-size: 3em;
+    /* padding-left: 4.5vw; */
+    padding-top: 2vh;
+    padding-bottom: 4vh;
+}
+
+.lista{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12vh;
+}
+
+li {
+    margin: 10px;
+}
+
+li > a:hover{
+    color: #087E8B;
+}
+
+li > a{
+    font-size: 1.2em;
+    line-height: 40px;
+    transition: .3s;
+}
+
+a > i{
+    color: #087E8B;
+    padding-right: 1vw;
+}
+
+#retorno-topo > i{
+    margin-top: 15vh;
+    margin-left: 2.5vw;
+    text-align: center;
+    color: #087E8B;
+}
+
+
+.text-area > h1, .content > h1{
+    text-align: center;
+    font-size: 2em;
+    padding: 20px;
+}
+
+.content > h1{
+    padding: 30px;
+}
+
+.thoughts{
+    display: block;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    float: left;
+    padding: 30px;
+}
+
+.thoughts:first-of-type{
+    border-top: none;
+}
+
+.thoughts > h1{
+    font-family: cursive;
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+.thoughts img{
+    max-width: 100%;
+}
+
+#form-thoughts > input{
+    font-family: cursive;
+    font-weight: 700;
+    width: 10vw;
+    /* height: 5vh; */
+    padding: 8px !important;
+    margin: 10px;
+    margin-left: -.1vw;
+    border: 2px solid #ccc;
+    color: #087E8B;
+    border-radius: 20px;
+    box-sizing: unset;
+    outline: 0;
+    cursor: pointer;
+    transition: .3s;
+    /* border-bottom: 2.5px solid #087E8B; */
+}
+
+#form-thoughts > input:hover{
+    background: #087E8B;
+    color: #f5f5f5;
+}
+
+@media (max-width: 850px){
+    .thoughts img{
+        max-height: 300px;
+        height: auto;
+    }
+
+    .aside-mobile{
+        display: flex;
+    }
+
+    .aside-header{
+        display: none;
+    }
+
+    .aside-mobile > .img{
+        max-width: 100%;
+        width: auto;
+        padding: 6vh 3vw;
+    }
+
+    .ul-desktop{
+        display: none;
+    }
+
+    .ul-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+    }
+}
+
+@media (max-width: 660px){
+    .aside-mobile > .img{
+        max-width: 100%;
+        width: auto;
+        padding: 6vh 1vw;
+    }
+
+    .text-area{
+        margin-left: 0vw;
+        margin-right: 4vw;
+    }
+}
+
+@media (max-width: 505px){
+    .aside-mobile > .img{
+        max-width: 100%;
+        width: 30px;
+        padding: 6vh 0;
+    }
+}
