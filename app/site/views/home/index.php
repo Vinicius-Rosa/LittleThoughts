@@ -24,10 +24,10 @@
             <div class="aside-menu">
                 <div class="aside-header">
                     <h1 class="anime">Little Thoughts</h1>
-                    <div class="img anime"><img src="src/img/logo.png" alt="Logo"></div>
+                    <div class="img anime"><img src="<?=URL?>assets/img/logoMenor.png" alt="Logo"></div>
                 </div>
                 <div class="aside-mobile">
-                        <div class="img anime"><img src="src/img/logo.png" alt="Logo"></div>
+                        <div class="img anime"><img src="<?=URL?>assets/img/logoMenor.png" alt="Logo"></div>
                     </div> 
                 <div class="lista">
                     <ul class="ul-desktop">
