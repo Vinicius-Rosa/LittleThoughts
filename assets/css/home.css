@@ -123,17 +123,18 @@ li {
     margin: 10px;
 }
 
-li > a:hover{
+li > a:hover, label > span:hover{
     color: #087E8B;
 }
 
-li > a{
+li > a, label > span{
     font-size: 1.2em;
     line-height: 40px;
     transition: .3s;
+    cursor: pointer;
 }
 
-a > i{
+a > i, span > i{
     color: #087E8B;
     padding-right: 1vw;
 }
@@ -251,4 +252,30 @@ a > i{
         width: 30px;
         padding: 6vh 0;
     }
+}
+
+.ul-sanfona{
+    padding: 20px 0;
+    line-height: 20px;
+    text-align: center;
+}
+
+.ul-sanfona li:hover{
+    color: #087E8B;
+}
+
+#menu-sanfona{
+    display: none;
+}
+
+.ul-sanfona{
+    display: none;
+}
+
+#menu-sanfona:checked + .trigger-sanfona .ul-sanfona{
+    display: block;
+}
+
+#menu-sanfona:checked + .trigger-sanfona span{
+    color: #087E8B;
 }

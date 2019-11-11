@@ -15,8 +15,8 @@ class Cadastro {
 
         $this->dados["includes"] = array(
                 "styles" => array(
-                    URL."assets/css/resetCadastro.css",
-                    URL."assets/css/index.css"),
+                    URL."assets/css/reset.css",
+                    URL."assets/css/cadastro.css"),
                 "scripts" => array(
                     URL."assets/js/jquery-3.4.1.min.js",
                     URL."assets/js/index.js",

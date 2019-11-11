@@ -11,7 +11,7 @@
                 <input class="anime" name="login" type="text" placeholder="Usuário">
                 <input class="anime" name="password" type="password" placeholder="Senha">
 
-                <!-- <h2 class="anime"><a href="#">Esqueceu a senha?</a></h2> -->
+                <h2 class="anime"><a href="#">Esqueceu a senha?</a></h2>
 
                 <a href="<?=URL?>cadastro/index" class="anime">Cadastre-se!</a>
                 <button id="btn_login" class="anime" type="submit">Login</button>

@@ -18,8 +18,8 @@ class Home {
 
     	$this->dados["includes"] = array(
                 "styles" => array(
-                    URL."assets/css/resetHome.css",
-                    URL."assets/css/indexHome.css"),
+                    URL."assets/css/reset.css",
+                    URL."assets/css/home.css"),
             );
 
         $carregarView = new \Config\ConfigView("home/index", $this->dados);
