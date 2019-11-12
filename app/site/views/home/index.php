@@ -32,8 +32,30 @@
                 <div class="lista">
                     <ul class="ul-desktop">
                         <li><a href="#"><i class="far fa-clock"></i> Recentes</a></li>
-                        <li><a href="#"><i class="far fa-calendar-alt"></i> Mês</a></li>
-                        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        <li>
+                            <input type="checkbox" name="" id="menu-sanfona">
+                            <div class="trigger-sanfona">
+                                
+                            <label for="menu-sanfona">
+                                    <span><i class="far fa-calendar-alt"></i> Mês</span>
+                                    
+                            </label>
+                                    <ul class="ul-sanfona">
+                                    <a href="#"><li>Janeiro</li></a>
+                                    <a href="#"><li>Fevereiro</li></a>
+                                    <a href="#"><li>Março</li></a>
+                                    <a href="#"><li>Abril</li></a>
+                                    <a href="#"><li>Maio</li></a>
+                                    <a href="#"><li>Junho</li></a>
+                                    <a href="#"><li>Julho</li></a>
+                                    <a href="#"><li>Agosto</li></a>
+                                    <a href="#"><li>Setembro</li></a>
+                                    <a href="#"><li>Outubro</li></a>
+                                    <a href="#"><li>Novembro</li></a>
+                                    <a href="#"><li>Dezembro</li></a>
+                                </ul>
+                            
+                            </div>                        <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                         <li><a href="#topo" id="retorno-topo"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a></li>
                     </ul>
                     <ul class="ul-mobile">
