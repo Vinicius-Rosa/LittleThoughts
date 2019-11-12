@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Little Thoughts</title>
+    <link rel="shortcut icon" type="image/x-icon" href="<?=URL?>assets/img/logoMenor.png">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,400i,500,500i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco&display=swap" rel="stylesheet"> 
