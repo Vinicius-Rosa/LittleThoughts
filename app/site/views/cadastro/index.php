@@ -14,7 +14,7 @@
                     <input class="anime" name="password_confirm" type="password" placeholder="Repita a senha">
 
                     <button class="anime" type="submit">Cadastrar</button>
-                    <a href="<?=URL?>login/index" class="anime">Já possui um cadastro? Login!</a>
+                    <div class="anime cd-login"><a href="<?=URL?>login/index">Já possui um cadastro? Login!</a></div>
                 </form>
             </div>
         </div>

@@ -1,4 +1,3 @@
-
 function setCKEditorToTextarea() {
 	for(var instanceName in CKEDITOR.instances)
 	CKEDITOR.instances[instanceName].updateElement('.thoughts');            
@@ -37,3 +36,14 @@ $(function(){
 
 
 })
+
+$('li a').click(function(e){
+	e.preventDefault;
+
+	var id = $(this).attr('href'),
+		targetOffset = $(id).offset().top;
+
+	$('html, body').animate({
+		scrollTop: targetOffset
+	}, 500);
+});

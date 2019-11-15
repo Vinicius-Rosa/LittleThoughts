@@ -23,6 +23,8 @@ class Home {
                 "scripts" => array(
                     URL."assets/js/jquery-3.4.1.min.js",
                     "//cdn.ckeditor.com/4.13.0/standard/ckeditor.js",
+                    URL."assets/js/loading.js",
+                    URL."assets/js/readmore.js",
                     URL."assets/js/util.js",
                     URL."assets/js/home.js")
             );

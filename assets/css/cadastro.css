@@ -146,6 +146,15 @@ form > a:hover{
 	transform: scale3d(1, 1, 1);
 }
 
+.cd-login{
+    padding: 20px;
+}
+
+.cd-login:hover > a{
+    color: #087E8B;
+    transition: .3s;
+}
+
 @media (min-width: 850px){
     .container{
         box-shadow: 5px 4px 8px 2px rgba(0,0,0,0.2);
