@@ -43,7 +43,8 @@
                             <div class="trigger-sanfona">
                                 
                             <label for="menu-sanfona">
-                                    <span><i class="far fa-calendar-alt"></i> Mês</span>   
+                                    <span><i class="far fa-calendar-alt"></i> Mês</span>
+                                    
                             </label>
                                 <ul class="ul-sanfona">
                                     <a href="<?= URL."home/month/1" ?>"><li>Janeiro</li></a>
@@ -59,6 +60,7 @@
                                     <a href="<?= URL."home/month/11" ?>"><li>Novembro</li></a>
                                     <a href="<?= URL."home/month/12" ?>"><li>Dezembro</li></a>
                                 </ul>
+                            
                             </div>
                         <li><a href="<?=URL.'login/logout'?>"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                         <li><a href="#topo" class="top-button" id="retorno-topo"><i class="far fa-arrow-alt-circle-up fa-2x"></i></a></li>
@@ -73,15 +75,8 @@
                     <!--/MOBILE-->
                 </div>
             </div>
-        <div class="text-area" id="topo">
-            <h1>Divida conosco um pensamento!</h1>
-            <form id='form-thoughts' method="post">
-                <textarea id="editor1" name="editor1"></textarea>
-                <input type="submit" value="Publicar">
-            </form>
-        </div>
         <div class="content" id="content">
-            <h1 id="remember-historys">Relembre algumas coisas <i class="fas fa-smile-wink fa-xs"></i></h1>
+            <h1 id="remember-historys">Relembre Algumas Coisas do Mês de <?= $this->dados["mes"] ?>  <i class="fas fa-smile-wink fa-xs"></i></h1>
             <div id="teste" class="">
                 <?php 
                     foreach($this->dados["historys"] as $history){

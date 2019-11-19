@@ -1,9 +1,29 @@
+window.onload = function()  {
+            CKEDITOR.replace( 'editor1' );
+        };
+
 function setCKEditorToTextarea() {
 	for(var instanceName in CKEDITOR.instances)
 	CKEDITOR.instances[instanceName].updateElement('.thoughts');            
 }
 
+function excluir(id){
+	var id = id;
 
+	$.ajax({
+		type: "post",
+		url: URL+"home/delHistoryAjax",
+		dataType: "json",
+		data: {id : id},
+		success: function(data){
+			if(data["error"] == 1){
+				$("#"+id).remove();
+			}else{
+				alert("Algo deu errado!");
+			}
+		}
+	})
+}
 
 $(function(){
 
@@ -20,13 +40,11 @@ $(function(){
 			success: function(data){
 				if(data["error"] == 1){
 					CKEDITOR.instances.editor1.setData( '', function() { this.updateElement(); });
-					$("#teste").html('');
-					for(i = 0; i<data["qtd"]; i++){
-						$("#teste").append("<div class='thoughts'>"+data["historys"][i]["codigo_fonte"]+"</div>");
-					}
-					//window.location.href = URL+"home/index";
+					$("#teste").prepend('<div id="'+data["history"][0]["id_history"]+'" class="thoughts">'
+						+'<a class="excluir" onclick="excluir('+data["history"][0]["id_history"]+')"><i class="fas fa-trash"></i></a>'
+						+data["history"][0]["codigo_fonte"]+"</div>");
 				}else{
-					alert("deu ruim");
+					alert("Algo deu errado!");
 				}
 			}
 		})
@@ -34,13 +52,14 @@ $(function(){
 		return false;
 	})
 
+	
 
 })
 
 $('li a').click(function(e){
 	e.preventDefault;
 
-	var id = $(this).attr('href'),
+	var id = $(this).attr('href');
 		targetOffset = $(id).offset().top;
 
 	$('html, body').animate({

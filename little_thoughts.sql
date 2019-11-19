@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 12-Nov-2019 às 11:37
+-- Generation Time: 19-Nov-2019 às 13:48
 -- Versão do servidor: 5.7.26
 -- versão do PHP: 7.2.18
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `historys` (
   `codigo_fonte` text NOT NULL,
   `data_criacao` datetime NOT NULL,
   PRIMARY KEY (`id_history`)
-) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=81 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `historys`
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `page` (
   `controller` varchar(50) NOT NULL,
   `method` varchar(50) NOT NULL,
   PRIMARY KEY (`id_pag`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `page`
@@ -69,7 +69,9 @@ INSERT INTO `page` (`id_pag`, `controller`, `method`) VALUES
 (4, 'Login', 'logout'),
 (5, 'Cadastro', 'index'),
 (6, 'Cadastro', 'exeCadastroAjax'),
-(7, 'Home', 'addHistoryAjax');
+(7, 'Home', 'addHistoryAjax'),
+(8, 'Home', 'delHistoryAjax'),
+(9, 'Home', 'getHistoriesMonth');
 
 -- --------------------------------------------------------
 
@@ -84,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email_user` varchar(100) NOT NULL,
   `password_user` char(32) NOT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `users`
@@ -92,7 +94,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id_user`, `login_user`, `email_user`, `password_user`) VALUES
 (1, 'maxwellf', 'max@max.com', 'e10adc3949ba59abbe56e057f20f883e'),
-(2, 'vinirosa', 'vinirosa@gmail.com', 'e10adc3949ba59abbe56e057f20f883e');
+(2, 'vinirosa', 'vinirosa@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
+(3, 'rogerioc', 'rogerio@rogerio', 'e10adc3949ba59abbe56e057f20f883e');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
