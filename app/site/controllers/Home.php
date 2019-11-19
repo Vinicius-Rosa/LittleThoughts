@@ -84,7 +84,10 @@ class Home {
                     URL."assets/css/home.css"
                 ),
                 "scripts" => array(
-                    URL."assets/js/loading.js"
+                    URL."assets/js/jquery-3.4.1.min.js",
+                    URL."assets/js/loading.js",
+                    URL."assets/js/util.js",
+                    URL."assets/js/home.js"
                 )
             );
 
@@ -92,7 +95,7 @@ class Home {
             $this->dados["histories"] = $listar->get_histories_month($mes);
 
             $meses = array("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Desembro");
-            $this->dados["mes"] = $meses[$mes];
+            $this->dados["mes"] = $meses[$mes-1];
 
             $carregarView = new \Config\ConfigView("home/month", $this->dados);
             $carregarView->renderizar();   

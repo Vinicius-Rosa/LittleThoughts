@@ -11,18 +11,18 @@
         <a href="#" class="exit">X</a>
         <div class="copy">
             <ul class="ul-modal">
-                <a href="<?= URL."home/month/1" ?>"><li class="first">Janeiro</li></a>
-                <a href="<?= URL."home/month/2" ?>"><li>Fevereiro</li></a>
-                <a href="<?= URL."home/month/3" ?>"><li>Março</li></a>
-                <a href="<?= URL."home/month/4" ?>"><li>Abril</li></a>
-                <a href="<?= URL."home/month/5" ?>"><li>Maio</li></a>
-                <a href="<?= URL."home/month/6" ?>"><li>Junho</li></a>
-                <a href="<?= URL."home/month/7" ?>"><li>Julho</li></a>
-                <a href="<?= URL."home/month/8" ?>"><li>Agosto</li></a>
-                <a href="<?= URL."home/month/9" ?>"><li>Setembro</li></a>
-                <a href="<?= URL."home/month/10" ?>"><li>Outubro</li></a>
-                <a href="<?= URL."home/month/11" ?>"><li>Novembro</li></a>
-                <a href="<?= URL."home/month/12" ?>"><li>Dezembro</li></a>
+                <a href="<?= URL."home/getHistoriesMonth/1" ?>" class='first'><li>Janeiro</li></a>
+                <a href="<?= URL."home/getHistoriesMonth/2" ?>"><li>Fevereiro</li></a>
+                <a href="<?= URL."home/getHistoriesMonth/3" ?>"><li>Março</li></a>
+                <a href="<?= URL."home/getHistoriesMonth/4" ?>"><li>Abril</li></a>
+                <a href="<?= URL."home/getHistoriesMonth/5" ?>"><li>Maio</li></a>
+                <a href="<?= URL."home/getHistoriesMonth/6" ?>"><li>Junho</li></a>
+                <a href="<?= URL."home/getHistoriesMonth/7" ?>"><li>Julho</li></a>
+                <a href="<?= URL."home/getHistoriesMonth/8" ?>"><li>Agosto</li></a>
+                <a href="<?= URL."home/getHistoriesMonth/9" ?>"><li>Setembro</li></a>
+                <a href="<?= URL."home/getHistoriesMonth/10" ?>"><li>Outubro</li></a>
+                <a href="<?= URL."home/getHistoriesMonth/11" ?>"><li>Novembro</li></a>
+                <a href="<?= URL."home/getHistoriesMonth/12" ?>"><li>Dezembro</li></a>
             </ul>
         </div>
     </div>
@@ -47,18 +47,18 @@
                                     
                             </label>
                                 <ul class="ul-sanfona">
-                                    <a href="<?= URL."home/month/1" ?>"><li>Janeiro</li></a>
-                                    <a href="<?= URL."home/month/2" ?>"><li>Fevereiro</li></a>
-                                    <a href="<?= URL."home/month/3" ?>"><li>Março</li></a>
-                                    <a href="<?= URL."home/month/4" ?>"><li>Abril</li></a>
-                                    <a href="<?= URL."home/month/5" ?>"><li>Maio</li></a>
-                                    <a href="<?= URL."home/month/6" ?>"><li>Junho</li></a>
-                                    <a href="<?= URL."home/month/7" ?>"><li>Julho</li></a>
-                                    <a href="<?= URL."home/month/8" ?>"><li>Agosto</li></a>
-                                    <a href="<?= URL."home/month/9" ?>"><li>Setembro</li></a>
-                                    <a href="<?= URL."home/month/10" ?>"><li>Outubro</li></a>
-                                    <a href="<?= URL."home/month/11" ?>"><li>Novembro</li></a>
-                                    <a href="<?= URL."home/month/12" ?>"><li>Dezembro</li></a>
+                                    <a href="<?= URL."home/getHistoriesMonth/1" ?>"><li>Janeiro</li></a>
+                                    <a href="<?= URL."home/getHistoriesMonth/2" ?>"><li>Fevereiro</li></a>
+                                    <a href="<?= URL."home/getHistoriesMonth/3" ?>"><li>Março</li></a>
+                                    <a href="<?= URL."home/getHistoriesMonth/4" ?>"><li>Abril</li></a>
+                                    <a href="<?= URL."home/getHistoriesMonth/5" ?>"><li>Maio</li></a>
+                                    <a href="<?= URL."home/getHistoriesMonth/6" ?>"><li>Junho</li></a>
+                                    <a href="<?= URL."home/getHistoriesMonth/7" ?>"><li>Julho</li></a>
+                                    <a href="<?= URL."home/getHistoriesMonth/8" ?>"><li>Agosto</li></a>
+                                    <a href="<?= URL."home/getHistoriesMonth/9" ?>"><li>Setembro</li></a>
+                                    <a href="<?= URL."home/getHistoriesMonth/10" ?>"><li>Outubro</li></a>
+                                    <a href="<?= URL."home/getHistoriesMonth/11" ?>"><li>Novembro</li></a>
+                                    <a href="<?= URL."home/getHistoriesMonth/12" ?>"><li>Dezembro</li></a>
                                 </ul>
                             
                             </div>
@@ -79,7 +79,7 @@
             <h1 id="remember-historys">Relembre Algumas Coisas do Mês de <?= $this->dados["mes"] ?>  <i class="fas fa-smile-wink fa-xs"></i></h1>
             <div id="teste" class="">
                 <?php 
-                    foreach($this->dados["historys"] as $history){
+                    foreach($this->dados["histories"] as $history){
                         echo '<div id="'.$history["id_history"].'" class="thoughts">';
                         echo '<a class="excluir" onclick="excluir('.$history["id_history"].')">
                                 <i class="fas fa-trash"></i>
